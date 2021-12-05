@@ -1,0 +1,219 @@
+/* para usar la funete de roboto
+font-family: 'Roboto', sans-serif;
+*/
+
+/*
+#lista{  font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    color: salmon;
+}*/
+
+
+
+
+/*importamos tipo de letra o fuente roboto, hay otra forma desde html */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* -------------------------------------------NORMALIZACIÓN-----siempre va encima de todo y rompe todo  */
+/*   el asterisco hace referencia a universal*/
+
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: inherit;*/
+    box-sizing: border-box;
+}
+
+:root{
+    /*Colores */
+    --amarillo: #eac926 ;
+    --azul: #03264C;
+    --seleste: #1259c3;
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    --negro: rgba(3, 2, 2, 1);
+    --blanco: #ffff;
+    --azul: #0044aa;
+    /* fuentes-Tamaños */
+    --cuerpos-de-texto: 1.2em;
+    --titulares-visita-ofertas : 2.4em;
+    --precios: 1.8em;
+    --descuentos: 1.6em;
+    --descripciones: 1.6em;
+    /*Fuente-tipo de fuentes*/
+    --roboto:"Roboto" , sans-serif;
+
+}
+/*ESTILOS COMUNES*/
+html{
+    font-size: 62.5%;            
+    
+    /* se usa rem em px   */
+    /*rem =una unidad del valor por defecrto del navaegador =16px */
+    /*em = tamaño de fuente de la etiqueta padre o el navegador= 16px*/
+    /*como toca hacer elcalculo de multiplicar rem + la cantidad de px
+    entonces pizamos o inicializamos el valor en 62.5% que equivales al 10px
+    ahora rem=10px y un em=10px   así que rem=1.3 es igual a 13px*/
+   
+    font-family: var(--roboto);   /* font-family: "Roboto", sans-serif;*/
+}
+
+p{
+    font-size: var(--cuerpos-de-texto);
+}
+
+h3{
+    font-size: var(--titulares-visita-ofertas);
+}
+
+
+/* CABECERA*/
+header{
+    background-color: var(--amarillo)
+}
+
+div.top-header{
+    padding: 5%;
+}
+
+header picture.logo{
+    display: block;
+    width: 50%;
+}
+
+header nav {
+    font-size: var(--cuerpos-de-texto) ;
+}
+
+header ul li{
+    list-style-type: none ;
+    
+}
+
+header ul li a{
+    text-decoration: none;
+    color: var(--negro);       
+}
+ 
+header .form .input{
+    background-color: var(--blanco);
+    border: 1px solid var(--negro);
+    color:var(--gris-oscuro);
+    padding: 2px;
+}
+
+
+header .form .submit{
+    background-color: var(--blanco);
+    border: 1px solid var(--negro) ;
+    width: 18px;
+    padding: 2px;
+}
+
+header div.top-header p{
+    text-align: center;
+}
+
+header div.burger-menu{
+    display: block;
+    text-align: center;
+
+}
+
+header div.burger-menu {
+    
+    background-color: var(--azul);
+    font-size: 20px;             /*tamaño*/
+    color: var(--blanco);        /*coloe de la figura*/
+    height: 40px;
+    /*width: 40px;*/
+    /*text-align: center;*/
+
+    margin: 10px 162px 20px 162px;
+
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+
+/*MAIN*/
+
+
+
+
+
+/*foot*/
+
+footer div{
+    text-align: center;
+    background-color: var(--blanco) ;
+    font-size: 20px;
+    color: var(--azul);
+    height: 10px;
+    /*width: 35px;*/
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    border-radius: 5%;
+
+}
+/*paso largo */
+/*
+footer div.ico-foott{
+    background-color: var(--blanco) ;
+    font-size: 20px;
+    color: var(--azul);
+    height: 40px;
+width: 35px;
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    border-radius: 5%;
+text-align: center;
+}
+
+footer div.ico-footr{
+    background-color: var(--blanco) ;
+    font-size: 20px;
+    color: var(--azul);
+    height: 40px;
+width: 35px;
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    border-radius: 5%;
+text-align: center;
+}
+
+footer div.ico-foots{
+    background-color: var(--blanco);
+    font-size: 20px;
+    color:var(--azul);
+    height: 40px;
+width: 40px;
+    margin: 20px 0 20px 0 ;
+    padding: 40px;
+    border: 5%;
+
+}
+
+*/
+
+footer p {
+    text-align: center;
+    color:var(--gris-oscuro)
+
+
+}
+
+footer h3.h3 {
+    text-align: center;
+    color:var(--gris-oscuro)
+    
+
+}
+footer section h4.copy{
+    color: #669;
+    font-size: 1.6em;
+    text-align:right;
+
+}
