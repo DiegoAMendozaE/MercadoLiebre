@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+   <!-- <link rel="stylesheet" href="/css/stylesRegister.css">-->
+    <link rel="stylesheet" href="/ccs/stylesRegister.css">
+
+    <title>Register</title>
+</head>
+<body>
+
+    <!--HEADER-->
+    <header class="main-header">
+        
+            <div class="main-headet-top-bar">
+                <picture class="logo">
+                    <img src="/img/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+                </picture>
+                
+                    <form class="buscar" action="/" method="get">
+                        <input type="text" placeholder="ingrese producto" class="input" required>
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                
+
+                <h3 class="copy-header"><i class="far fa-hand-point-right"></i> comprar en cuotas y sin tarjeta de crédito</h3>           
+            </div>
+
+            <a href="#" class="hamburguer-button">
+                <i class="fas fa-bars"></i>
+            </a>
+
+            <nav class="main-navbar">
+                <ul class="left-navbar">
+                    <li><a href="#">Oferta</a></li>
+                    <li><a href="#">Tiendas Oficieles</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+
+                <ul class="rigth-navbar">
+                    <li></li> <a href="/register">Creá tu cuenta </a>  <i class="far fa-id-card"></i> </li>
+                    <li></li> <a href="/login">Ingresá </a>  <i class="fas fa-sign-in-alt"></i> </li>
+                    <li></li> <a href="#">Compras </a> <i class="fas fa-shopping-basket"></i> </li>
+                </ul>
+            </nav>
+
+    </header>
+    <!--fin del HEADER-->
+    <!--MAIN-->
+
+    <form action="#" method="post">
+          <input type="text" name="nombre" required placeholder="Nombre">
+          <input type="text" name="usuario" required placeholder="Nombre de usuar@">
+          <input type="email" name="email" required placeholder="ingrese gmail">
+          <label>Fecha de Nacimiento</label>
+          <input type="date" name="FechaNacimiento" required placeholder="Fecha de nacimiento">
+          <input type="text" name="Dirección de vivienda" required placeholder="Dirección de vivienda">
+
+          <!--PERFIL DE USUARIO-->
+          <h3>Perfil del Usuario </h3>
+          <label >
+              <div>
+                  <label>Comprador</label>
+                  <input type="radio" name="labor" id="comprador" value="comprador">   
+                  <label>Vendedor</label>         
+                  <input type="radio" name="labor" id="vendedor" value="vendedor">
+               </div>
+          </label>
+          <h3>Intereses</h3>
+          <div>
+                <div>
+                  <label>Electro</label>
+                  <input type="checkbox" name="interes" id="electro" value="electro">
+                </div>
+                <div>
+                    <label>Moda</label>
+                    <input type="checkbox" name="interes" id="moda" value="moda">
+                </div>
+                <div>
+                    <label>Hogar</label>
+                    <input type="checkbox" name="interes" id="hogar" value="hogar">
+                </div>
+                <div>
+                    <label>Juguetería</label>
+                    <input type="checkbox" name="interes" id="jugueteria" value="jugueteria">
+                </div>
+
+                <div>
+                  <label>Vida Sana</label>
+                  <input type="checkbox" name="interes" id="vida" value="vida">
+                </div>
+          </div>
+          <div>
+              <h3>Elegí Tu Foto de Usuario</h3>
+              <input type="file" name="foto" accept=".jpg, .png">
+              <input type="password" name="password" required placeholder="Elegí tu contraseña">
+              <input type="password" name="passwordC" required placeholder="Confima tu contraseña">
+          </div>
+          <div>
+            <button type="submit" name="BEnviar"> Enviar </button>
+            <button type="reset" name="BBorrar"> Borrar </button>
+          </div>
+
+
+
+    </form>
+
+
+    <!--fin MAIN-->  
+    <!--FOOTER-->
+
+    <!--fin del FOOTER-->
+    
+</body>
+</html>
+
+
+

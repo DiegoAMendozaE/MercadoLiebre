@@ -1,0 +1,119 @@
+/*Inportamos la libreria de la letra Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+                                             /*Variables */
+:root{
+/*Colores*/
+    --amarillo:#EAC926;
+    --azul:#03264c;
+    --blanco:#ffff;
+    --AzulOscuro:#222222;
+/*Tipografia */
+    --roboto:"Roboto",sans-serif;
+}
+
+body{
+    font-family: var(--roboto);
+}
+
+.main-header{    /*font-size: 62.5%;*/
+    background-color: var(--amarillo);
+    padding: 20px;
+    }
+
+    
+
+
+.hamburguer-button{
+    background-color: var(--azul); /*fondo del recuadro de la figura */
+    color:var(--blanco);/*color de la figura */
+    display: block;  /*lo combierte en un elemento de bloque, nos permite usar varias funciones y trata de ocupar todo el ancho*/
+    max-width: 40px ;/*reducemos el ancho */
+    padding: 10px 0px;/*ponemos 10px para el alto y cero para los lados ya que los reducimos con la funcion anterior*/
+    border-radius: 8px;/*achica las puntas del recuadro*/
+    text-align: center;/*alinea la figura en el centro del recuadro que ocupa */
+    font-size: 18px;/*genera como un tipo de margen pero no es una margen*/
+    margin: auto;/*lo centra  ya que esta ocupando toda una fila */
+}
+
+.logo{
+    width: 200px;
+}
+
+.copy-header{
+    font-weight: 400;  /* reduce el grosor de la letra*/
+    text-align:center; /*Centra el texto*/
+}
+
+.main-navbar{
+display: none;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;  
+}
+
+
+
+
+
+
+.main-navbar a {
+    text-decoration: none;/* queta la linea de debajo*/
+    color :var(--AzulOscuro);/*color de la letra*/
+    display: inline-block;/*lo convertimos en atributos de linea y bloque*/
+    padding: 5px 0px;/*le damos un poco de relleno tanto en top como en abajo */
+    font-size:17px;
+}
+
+
+
+@media screen and (min-width:769px){  /*tambien sirve con @media ()...*/
+  
+    .main-headet-top-bar{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .main-header-top-bar .buscar{
+        display: flex;
+        justify-content: center;
+        padding: 0px 30px;
+    }
+
+    .copy-header{
+        max-width: 350px;
+        text-align: right;
+    }
+
+    .hamburguer-button{
+        display: none;
+    }
+
+    .main-navbar{
+        display: flex;
+        border: rebeccapurple 2px dotted;
+        justify-content: space-between;
+    }
+
+    .left-navbar{
+
+    }
+
+    .rigth-navbar{
+
+    }
+}
+
+
+
+

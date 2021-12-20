@@ -45,6 +45,9 @@ font-family: 'Roboto', sans-serif;
     --roboto:"Roboto" , sans-serif;
 
 }
+
+
+
 /*ESTILOS COMUNES*/
 html{
     font-size: 62.5%;            
@@ -66,7 +69,12 @@ p{
 h3{
     font-size: var(--titulares-visita-ofertas);
 }
-
+.flex-row{
+    display: flex;
+    gap:20px ;
+    align-items: baseline;
+    flex-wrap:wrap;
+}
 
 /* CABECERA*/
 header{
@@ -74,6 +82,9 @@ header{
 }
 
 div.top-header{
+    display:flex;
+    flex:wrap;
+    justify-content: center;
     padding: 5%;
 }
 
@@ -81,7 +92,10 @@ header picture.logo{
     display: block;
     width: 50%;
 }
-
+.form{
+    width:50%;
+    display: flex;
+}
 header nav {
     font-size: var(--cuerpos-de-texto) ;
 }
@@ -115,22 +129,26 @@ header div.top-header p{
     text-align: center;
 }
 
-header div.burger-menu{
-    display: block;
+header nav{
+    display: none;
+}
+
+
+div.burger-menu{
     text-align: center;
 
 }
 
-header div.burger-menu {
+header div.burger-menu i {
     
     background-color: var(--azul);
     font-size: 20px;             /*tamaño*/
     color: var(--blanco);        /*coloe de la figura*/
     height: 40px;
-    /*width: 40px;*/
+    width: 40px;                       /*tocaba comentariarlo */
     /*text-align: center;*/
 
-    margin: 10px 162px 20px 162px;
+    margin: 10px 0px 20px 0px;
 
     padding: 10px;
     border-radius: 5px;
@@ -138,10 +156,94 @@ header div.burger-menu {
 }
 
 
+/*BANNER*/
+
+section.banner img{  /*recordemos que el block usa el 100% del bloque toca nombrar a la img pra que funcione
+    */
+    width: 100%;
+
+}
+
+
+
 /*MAIN*/
 
 
+body{
+    background-color: var(--gris-claro);
+}
 
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: var(--blanco);
+    margin:10px 0px;
+}
+
+
+ main section img{
+     width: 100%;
+ }
+
+
+
+
+ h2, .description{
+     color: var(--gris-oscuro);
+ }
+
+ .price{
+     font-size: var(--precios) ;
+    /* width: 30% */;
+ }
+ /*.discount{     
+     width: 70%;
+ }*/
+
+main section article i, p.descuento {
+    color : var(--verde);
+}
+.descuento, .description{
+    font-size: var(--descuentos);
+}
+
+ .description {
+    display: none;
+}
+
+
+main section article i{
+    font-size: var(--cuerpos-de-texto);
+    border: 1px var(--verde) solid;
+    border-radius: 50%;
+
+   
+
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #FFF;
+    position: absolute;/*toca poner (position :relative;) al padre en este caso article div.prodict-card*/
+    right: 20px;
+    top: -15px;
+
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+main section article div.product-card{
+    width:100%;
+    border : 1px solid var(--gris-claro);
+    padding :15px;
+    position:relative;
+}
 
 
 /*foot*/
@@ -158,45 +260,7 @@ footer div{
     border-radius: 5%;
 
 }
-/*paso largo */
-/*
-footer div.ico-foott{
-    background-color: var(--blanco) ;
-    font-size: 20px;
-    color: var(--azul);
-    height: 40px;
-width: 35px;
-    margin: 20px 0 20px 0;
-    padding: 10px;
-    border-radius: 5%;
-text-align: center;
-}
 
-footer div.ico-footr{
-    background-color: var(--blanco) ;
-    font-size: 20px;
-    color: var(--azul);
-    height: 40px;
-width: 35px;
-    margin: 20px 0 20px 0;
-    padding: 10px;
-    border-radius: 5%;
-text-align: center;
-}
-
-footer div.ico-foots{
-    background-color: var(--blanco);
-    font-size: 20px;
-    color:var(--azul);
-    height: 40px;
-width: 40px;
-    margin: 20px 0 20px 0 ;
-    padding: 40px;
-    border: 5%;
-
-}
-
-*/
 
 footer p {
     text-align: center;
@@ -217,3 +281,62 @@ footer section h4.copy{
     text-align:right;
 
 }
+
+
+
+
+/*                                 RESPONSIVE*/
+/*QUE CSS Vamos a utilizar en los distintos tamaños de pantalla */
+/*solo pantallas screen*/
+@media screen and (min-width:361px) {
+    
+    .burger-menu{
+        display:none;
+    }
+
+    header nav{
+        display:flex;
+    }
+
+    nav ul{
+        display:flex;
+    }
+
+    .description{ 
+        display:block;
+    } 
+    
+     main section article{
+        box-shadow: 0px 0px 1px rgb(100,100,100);
+    }
+
+    .products-container{
+        display: flex;
+        gap: 10px;
+        flex-wrap:wrap;
+    }
+    .products-container article {
+        max-width: 45%;
+    }
+
+}
+
+@media screen and (min-width:769px){
+    .products-container{
+        max-width: 22%;
+    }
+
+    nav ul.izquierda{
+        display:flex;
+        justify-content: flex-start;
+
+    }
+    nav ul.derecha{
+        display:flex;
+        justify-content: flex-end;
+        
+    }     
+}
+
+
+
