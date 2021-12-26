@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --amarillo:#EAC926;
+    --azul:#03264c;
+    --blanco:#ffff;
+    --AzulOscuro:#222222;
+
+    --roboto:"Roboto",sans-serif;
+}
+
+body{
+    font-family:var(--roboto);
+}
+.main-header{
+    background-color:var(--amarillo);
+    padding: 20px;
+    position: fixed;   /*lo dejamos estatico,y al main-form lo corremos hacia abajo con margin-top*/
+    top:0px;
+    z-index: 2;
+}
+
+.hamburguer-button{
+    background-color:var(--azul);
+    color:var(--blanco);
+    display:block;
+    max-width: 40px;
+    padding:10px 0px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin:auto;
+}
+
+.logo {
+    width: 200px;
+    animation: aumentar 1s linear infinite alternate;
+}
+@keyframes aumentar{
+    0%{
+        transform: scale(0.8);
+    }
+
+
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+.copy-header{
+    font-weight:400;
+    text-align: center;
+    /*margin:20px;*/
+}
+.main-navbar{
+    display: none;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+}
+
+
+.main-navbar a {
+    text-decoration: none;/* queta la linea de debajo*/
+    color :var(--AzulOscuro);/*color de la letra*/
+    display: inline-block;/*lo convertimos en atributos de linea y bloque*/
+    padding: 5px 0px;/*le damos un poco de relleno tanto en top como en abajo */
+    font-size:17px;
+}
+
+
+
+
+/*estilos del login*/
+
+.main-form{
+    background-color: rgb(255, 251, 193);
+    display: block;
+    padding: 30px 10px ;
+    font-family: var(--roboto);
+    margin-top:200px;
+    
+    
+}
+.login{
+    padding: 5px 5px;
+    /*margin: 10px 500px 20px 200px;*/
+
+    position: relative;
+
+    width: 100%;
+}
+.login img{
+    width: 50%;
+}
+
+.login:hover h2{
+    opacity:1;
+    background-color: rgba(255,0,0,0.5);
+    border-radius: 50%;
+}
+.login h2{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: seashell;
+    margin: 0; 
+    padding: 15px;
+
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: all 450ms;
+
+}
+
+.nom-pass{
+    display:flex;
+    flex-direction: column;
+    padding: 15px 5px;
+}
+.nom-pass input{
+    width: 40%;
+}
+.nom-pass label{
+    font-size: 15px;
+    font-style: italic;
+}
+.boton{
+    background-color: #0098d4;
+    border:none;
+    font-size: 15px;
+    color:var(--blanco);
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 0.5s ;
+}
+.boton:hover{
+    background-color: #0022AA ;
+}
+/*footer*/
+
+
+footer{
+    margin: auto;
+    background-color: rgb(133, 106, 255) ;
+
+}
+
+
+footer section{
+        display:block;
+        padding: 20px 0px 10px;
+        /*width:700;*/
+    }
+footer section div{
+     
+        border:none;
+        max-width: 40px;
+        font-size: 30px;
+        color:var(--azul);
+        padding: 10px 0px;
+        border-radius: 8px;
+        text-align: center;
+        margin: auto;
+        transition: all 1s linear;
+    }
+
+footer section div:hover i {
+    color: rgb(0, 0, 0);
+    
+
+}
+
+    @media screen and (min-width:769px){  /*tambien sirve con @media ()...*/
+  
+        .main-headet-top-bar{
+            display: flex;
+            justify-content: space-around;
+    
+        }
+        .main-header-top-bar .buscar{
+            display: flex;
+            justify-content: center;
+            padding: 0px 30px;
+        }
+    
+        .main-navbar li{
+            margin: 0 15px;
+        }
+        .copy-header{
+            max-width: 350px;
+            text-align: right;
+        }
+    
+        .hamburguer-button{
+            display: none;
+        }
+    
+        .main-navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .left-navbar{
+            display: flex;
+            padding:10px 10px;
+            margin: auto;
+            
+        }
+    
+        .rigth-navbar{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    
+    @media screen and (min-width: 1200px) {
+    
+        .logo{
+            width: 250px;
+        }
+        .main-headet-top-bar, .main-navbar{ /*Limitamos el ancho*/
+            max-width: 1200px;
+            margin: auto;
+        }
+        .main-headet-top-bar{
+            align-items: center;
+            
+        }
+        .copy-header{
+            max-width: none;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0;
+        }
+        .main-navbar{
+            margin-top: 35px;
+        }
+        .main-navbar li{
+            margin: 0 15px;
+        }
+        .main-navbar a{
+            font-size: 19px;
+        }
+        
+    }
+@media screen and (min-width:500px){
+    footer {
+        background-color: rgb(133, 106, 255) ;
+        max-width: 1200px;
+    }
+    footer ul  {    
+
+       
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    ul section{
+        padding:5px 10px;
+        margin: 5px 5px;
+    }
+    ul h3{
+        font-size: 12px;
+
+    }
+    ul p{
+        font-size: 10px;
+        padding-top: 20px  ;
+    }
+    footer .copy{
+        text-align: center;
+    }
+
+}
+

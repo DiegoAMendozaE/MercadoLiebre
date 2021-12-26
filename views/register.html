@@ -25,8 +25,6 @@
                         <input type="text" placeholder="ingrese producto" class="input" required>
                         <button type="submit"><i class="fas fa-search"></i></button>
                     </form>
-                
-
                 <h3 class="copy-header"><i class="far fa-hand-point-right"></i> comprar en cuotas y sin tarjeta de crédito</h3>           
             </div>
 
@@ -43,9 +41,9 @@
                 </ul>
 
                 <ul class="rigth-navbar">
-                    <li></li> <a href="/register">Creá tu cuenta </a>  <i class="far fa-id-card"></i> </li>
-                    <li></li> <a href="/login">Ingresá </a>  <i class="fas fa-sign-in-alt"></i> </li>
-                    <li></li> <a href="#">Compras </a> <i class="fas fa-shopping-basket"></i> </li>
+                    <li><a href="/register">Creá tu cuenta  </a>. <i class="far fa-id-card"></i> </li>
+                    <li><a href="/login">Ingresá  </a>. <i class="fas fa-sign-in-alt"></i> </li>
+                    <li><a href="#">Compras  </a>. <i class="fas fa-shopping-basket"></i> </li>
                 </ul>
             </nav>
 
@@ -53,57 +51,84 @@
     <!--fin del HEADER-->
     <!--MAIN-->
 
-    <form action="#" method="post">
-          <input type="text" name="nombre" required placeholder="Nombre">
-          <input type="text" name="usuario" required placeholder="Nombre de usuar@">
-          <input type="email" name="email" required placeholder="ingrese gmail">
-          <label>Fecha de Nacimiento</label>
-          <input type="date" name="FechaNacimiento" required placeholder="Fecha de nacimiento">
-          <input type="text" name="Dirección de vivienda" required placeholder="Dirección de vivienda">
+    <form class="create-form" action="#" method="post">
+          <div class="control-formulario">
+            <label class="date-user-one" >Nombres Personales</label>
+            <input type="text" name="nombre" required placeholder="Nombre">
+          </div>
+          <div class="control-formulario">
+            <label class="date-user-one" >Nombre de Usuario</label>
+            <input type="text" name="usuario" required placeholder="Nombre de usuar@">
+          </div>
+          <div class="control-formulario">
+              <label class="date-user-one">Cuenta </label>
+              <input type="email" name="email" required placeholder="ingrese gmail">
+          </div>
+          <div class="control-formulario">
+            <label class="date-user-one">Fecha de Nacimiento</label>
+            <input type="date" name="FechaNacimiento" required placeholder="Fecha de nacimiento">
+          </div>
+          <div class="control-formulario">
+              <label class="date-user-one">Dirección de vivienda</label>
+              <input type="text" name="Dirección de vivienda" required placeholder="Dirección de vivienda">
+          </div>
 
-          <!--PERFIL DE USUARIO-->
-          <h3>Perfil del Usuario </h3>
-          <label >
-              <div>
-                  <label>Comprador</label>
-                  <input type="radio" name="labor" id="comprador" value="comprador">   
-                  <label>Vendedor</label>         
-                  <input type="radio" name="labor" id="vendedor" value="vendedor">
-               </div>
-          </label>
-          <h3>Intereses</h3>
-          <div>
+          
+          <div class="control-formulario">
+            <h5>Perfil del Usuario </h5>
+            <label >
                 <div>
+                    <label>Comprador</label>
+                    <input type="radio" name="labor" id="comprador" value="comprador">   
+                    <label>Vendedor</label>         
+                    <input type="radio" name="labor" id="vendedor" value="vendedor">
+                 </div>
+            </label>
+          </div>
+          
+          <div class="control-formulario">
+                <h5>Intereses</h5>
+                <div class="check">   
                   <label>Electro</label>
                   <input type="checkbox" name="interes" id="electro" value="electro">
                 </div>
-                <div>
+                <div class="check">
                     <label>Moda</label>
                     <input type="checkbox" name="interes" id="moda" value="moda">
                 </div>
-                <div>
+                <div class="check">
                     <label>Hogar</label>
                     <input type="checkbox" name="interes" id="hogar" value="hogar">
                 </div>
-                <div>
+                <div class="check">
                     <label>Juguetería</label>
                     <input type="checkbox" name="interes" id="jugueteria" value="jugueteria">
                 </div>
 
-                <div>
+                <div class="check">
                   <label>Vida Sana</label>
                   <input type="checkbox" name="interes" id="vida" value="vida">
                 </div>
           </div>
-          <div>
-              <h3>Elegí Tu Foto de Usuario</h3>
-              <input type="file" name="foto" accept=".jpg, .png">
-              <input type="password" name="password" required placeholder="Elegí tu contraseña">
-              <input type="password" name="passwordC" required placeholder="Confima tu contraseña">
+          <div class="control-formulario">
+            <h5>Elegí Tu Foto de Usuario</h5>
+            <div class="password">
+                <label >Foto </label>
+                <input type="file" name="foto" accept=".jpg, .png">
+    
+            </div>
+
+            <div class="password">
+                <label >Clave </label>
+                <input type="password" name="password" required placeholder="Elegí tu contraseña">
+                <input type="password" name="passwordC" required placeholder="Confima tu contraseña">
+            </div>
+
+
           </div>
-          <div>
-            <button type="submit" name="BEnviar"> Enviar </button>
-            <button type="reset" name="BBorrar"> Borrar </button>
+          <div class="botones">
+            <button class="boton-formulario" type="submit" name="BEnviar"> Enviar </button>
+            <button class="boton-formulario" type="reset" name="BBorrar"> Borrar </button>
           </div>
 
 
@@ -113,6 +138,45 @@
 
     <!--fin MAIN-->  
     <!--FOOTER-->
+    <footer>
+        <ul>
+            <section>
+                <div class="ico-foott">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h3 class="h3">Pagá con tarjeta o en efectivo</h3>
+                <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+                    puntos de pago. ¡Y siempre es seguro!
+                </p>
+            </section>
+    
+            <section>
+                <div class="ico-footr">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3 class="h3">Envío gratis desde $ 2.500</h3>
+                <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+                    productos. Es un beneficio de Mercado Puntos.
+                </p>
+            </section>
+                
+            <section>
+                <div class="ico-foots">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3 class="h3">Seguridad, de principio a fin</h3>
+                <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+                    porque estás siempre protegid@.
+                    </p>
+            </section>
+    
+        </ul>
+        <section class="copy">
+            <br>
+            <h4 class="final"> Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
+            <p></p>
+        </section>
+    </footer>
 
     <!--fin del FOOTER-->
     

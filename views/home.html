@@ -20,49 +20,40 @@
     <title>Bienveniso a MercadoLiebre</title>
 </head>
 <body>
-    <header>
-        <div class="top-header">  <!--lo usamos porque no hay nada semantico en el contenido-->
-            
-            <picture  class="logo">
-                <!-- lo usamos cundo el servidor no esta arriba 
-                    <img src="../public/img/img-home-banner.jpg" alt="Logo de MercadoLiebre">-->
-                <img src="/img/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
-            </picture>  
-                <!--<p>lugar para poner la barra de busqueda</p>--> 
-
-            
-                <form  class="from" action="/" method="get">
-                    <input class="input" type="text" placeholder="ingrese producto" class="input" required>
-                    <button class="submit" type="submit"><i class="fas fa-search"></i></button>
-                </form>
-                
-           <!-- <div class="form">
-
-                <input type="text" value=" Buscar productos marcas y más " class="input">
-                <div class="submit"> <i class="fas fa-search"></i> </div>
-            </div>-->
-            <!--<i class="fal fa-hand-holding-usd"></i>-->    
-            <p><i class="far fa-hand-point-right"></i>comprar en cuotas y sin tarjeta de crédito</p>            
-        </div>
-
-        <nav>
-            <ul class="izquierda">  <!--ul>li*4>a-->
-                <li> <a href="#">Oferta</a> </li>
-                <li> <a href="#">Tiendas Oficiales</a> </li>
-                <li> <a href="#">Vender</a> </li>
-                <li> <a href="#">Ayuda</a> </li>
-            </ul>
-            <ul class="derecha">  <!--ul>li*3>a-->
-                <li> <a href="/register">Creá tu cuenta</a> <i class="far fa-id-card"></i> </li>
-                <li> <a href="/login">Ingresá</a> <i class="fas fa-sign-in-alt"></i> </li>
-                <li> <a href="#">Mis compras</a> <i class="fas fa-shopping-basket"></i> </li>
-            </ul>
-        </nav>
+    <header class="main-header">
         
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-            
+            <div class="main-headet-top-bar">
+                <picture class="logo">
+                    <img src="/img/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+                </picture>
+                
+                    <form class="buscar" action="/" method="get">
+                        <input type="text" placeholder="ingrese producto" class="input" required>
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                
+
+                <h3 class="copy-header"><i class="far fa-hand-point-right"></i> comprar en cuotas y sin tarjeta de crédito</h3>           
+            </div>
+
+            <a href="#" class="hamburguer-button">
+                <i class="fas fa-bars"></i>
+            </a>
+
+            <nav class="main-navbar">
+                <ul class="left-navbar">
+                    <li><a href="#">Oferta</a></li>
+                    <li><a href="#">Tiendas Oficieles</a></li>
+                    <li><a href="#">Vender</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                </ul>
+
+                <ul class="rigth-navbar">
+                    <li></li> <a href="/register">Creá tu cuenta </a>  <i class="far fa-id-card"></i> </li>
+                    <li></li> <a href="/login">Ingresá </a>  <i class="fas fa-sign-in-alt"></i> </li>
+                    <li></li> <a href="#">Compras </a> <i class="fas fa-shopping-basket"></i> </li>
+                </ul>
+            </nav>
 
     </header><!--fin headder-->
 
@@ -71,7 +62,7 @@
     </section>
 
     <main>
-        <section>
+        <section >
             <h2 >Basado en tu ultima visita</h2>
             <div class="products-container">
                 <article>
@@ -121,13 +112,8 @@
                     </div>
                     <!--icono del camion-->
                 </article>
-            </div>
-                
-            
-
-
-          
-        </section>
+            </div>       
+        </section >
         <section>
             <h2>Sección de Ofertas</h2> 
             <div class="products-container">
@@ -179,13 +165,7 @@
                     </div>
                     <!--icono del camion-->
                 </article>
-            </div>
-
-          
-
-          
-
-         
+            </div>      
         </section>
 
     </main>

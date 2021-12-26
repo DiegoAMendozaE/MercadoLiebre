@@ -1,73 +1,64 @@
-/*Inportamos la libreria de la letra Roboto*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
     box-sizing: border-box;
 }
 
-                                             /*Variables */
 :root{
-/*Colores*/
     --amarillo:#EAC926;
+    --amarilloClaro:rgb(255, 251, 193);
     --azul:#03264c;
     --blanco:#ffff;
     --AzulOscuro:#222222;
-/*Tipografia */
+    --morado: rgb(133, 106, 255);
+
     --roboto:"Roboto",sans-serif;
 }
 
 body{
-    font-family: var(--roboto);
+    font-family:var(--roboto);
 }
 
-.main-header{    /*font-size: 62.5%;*/
-    background-color: var(--amarillo);
+
+.main-header{
+    position: fixed;                     /*lo dejamos fijo*/
+    top: 0px;                             /*lo dejamos fijo en la posición cero de arriba más abajo nostoca acomodar el cuerpo(, main fomr ) en este caso el crate-form con un margin top */
+    background-color:var(--amarillo);
     padding: 20px;
-   /* position: fixed;
-    top: 0px;
-    z-index: 2;*/
-    }
-
-    
-
+}
 
 .hamburguer-button{
-    background-color: var(--azul); /*fondo del recuadro de la figura */
-    color:var(--blanco);/*color de la figura */
-    display: block;  /*lo combierte en un elemento de bloque, nos permite usar varias funciones y trata de ocupar todo el ancho*/
-    max-width: 40px ;/*reducemos el ancho */
-    padding: 10px 0px;/*ponemos 10px para el alto y cero para los lados ya que los reducimos con la funcion anterior*/
-    border-radius: 8px;/*achica las puntas del recuadro*/
-    text-align: center;/*alinea la figura en el centro del recuadro que ocupa */
-    font-size: 18px;/*genera como un tipo de margen pero no es una margen*/
-    margin: auto;/*lo centra  ya que esta ocupando toda una fila */
+    background-color:var(--azul);
+    color:var(--blanco);
+    display:block;
+    max-width: 40px;
+    padding:10px 0px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin:auto;
 }
 
-.logo{
+.logo {
     width: 200px;
 }
 
 .copy-header{
-    font-weight: 400;  /* reduce el grosor de la letra*/
-    text-align:center; /*Centra el texto*/
+    font-weight:400;
+    text-align: center;
 }
-
 .main-navbar{
-display: none;
+    display: none;
 }
 
 .main-navbar ul{
     list-style: none;
     margin: 0px;
-    padding: 0px;  
+    padding:0px;
 }
-
-
-
-
 
 
 .main-navbar a {
@@ -78,10 +69,29 @@ display: none;
     font-size:17px;
 }
 
+@media screen and (min-width:361px) {
+    .main-header{
+        position: fixed;                     /*lo dejamos fijo*/
+        top: 0px;   
+    }
+    .create-form{
+            margin-top:var(--amarilloClaro) 220px;
 
+            }
+    
+}
 
 @media screen and (min-width:769px){  /*tambien sirve con @media ()...*/
-  
+    .main-header{
+        position: fixed;                     /*lo dejamos fijo*/
+        top: 0px;   
+    }
+    .create-form{
+            margin-top: 220px;
+            }
+    
+
+
     .main-headet-top-bar{
         display: flex;
         justify-content: space-around;
@@ -124,6 +134,12 @@ display: none;
 }
 
 @media screen and (min-width: 1200px) {
+    .main-header{
+        position: fixed;                     /*lo dejamos fijo*/
+        top: 0px;   }
+    .create-form{
+        margin-top: 220px;
+        }
 
     .logo{
         width: 250px;
@@ -154,69 +170,45 @@ display: none;
     
 }
 
-/*estilos formulario*/
+/* FORMULARIO*/
 .create-form{
     padding: 30px 30px;
+    align-items: center;
+    /*max-width: 1200px;*/
     background-color: rgb(255, 251, 193);
+    margin-top: 245px;
+
 }
 .control-formulario{
-    margin-bottom: 15px;
+    margin-bottom: 15px; /*genera un marge*/
 }
-.control-formulario .date-user-one{
+.control-formulario label{
+    margin-bottom: 5px;/*genera un margen */
     font-style: italic;
     display: block;
-    margin-bottom: 3px;
-}
 
+}
+.control{
+    width:70%;
+    padding: 8px;
+}
 
 .boton-formulario{
     background-color: var(--azul);
-    border: none;
+    border:none;
     font-size: 20px;
     color:var(--blanco);
     padding: 5px 10px;
     border-radius: 8px;
-}
-h5{
-    font-size: 18px;
-    text-align: center;
-    padding-top: 17px;
-    padding-bottom: 8px;
 
 }
-.check{
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-}
 
-.password{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 15px 5px;
-}
 
-.password input{
-    padding: 5px;
-    margin: 5px ;
-}
-.botones{
-    /*display: flex;
-    justify-content: space-around;*/
-    background-color: var(--azul);
-    border:none;
-    font-size: 15px;
-    color:var(--blanco);
-    padding: 5px 10px;
-    border-radius: 8px;
-}
-
-/*...footer*/
+/*..................Footer*/
 
 footer{
     margin: auto;
-    background-color: rgb(133, 106, 255) ;
+    background-color: var(--morado) ;
 
 }
 
@@ -240,7 +232,7 @@ footer section div{
 
 @media screen and (min-width:500px){
     footer {
-        background-color: rgb(133, 106, 255) ;
+        background-color: var(--morado) ;
         max-width: 1200px;
     }
     footer ul  {    
@@ -267,4 +259,3 @@ footer section div{
     }
 
 }
-
