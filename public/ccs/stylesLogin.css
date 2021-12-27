@@ -24,7 +24,9 @@ body{
     padding: 20px;
     position: fixed;   /*lo dejamos estatico,y al main-form lo corremos hacia abajo con margin-top*/
     top:0px;
-    z-index: 2;
+    z-index: 2;    
+    width: 100%;
+       /*le damos prioridad para que no quede pordebajo*/
 }
 
 .hamburguer-button{
@@ -37,6 +39,7 @@ body{
     text-align: center;
     font-size: 18px;
     margin:auto;
+
 }
 
 .logo {
@@ -55,9 +58,10 @@ body{
 
 }
 
-.copy-header{
-    font-weight:400;
+.copy-hearder{
+   /* font-weight:10px;*/
     text-align: center;
+    margin: 5px 5px 15px 0px;
     /*margin:20px;*/
 }
 .main-navbar{
@@ -89,7 +93,7 @@ body{
     display: block;
     padding: 30px 10px ;
     font-family: var(--roboto);
-    margin-top:200px;
+    margin-top:230px;
     
     
 }
@@ -99,10 +103,11 @@ body{
 
     position: relative;
 
-    width: 100%;
+    width: 63%;
 }
 .login img{
-    width: 50%;
+    padding: 20px 5px;
+    width: 30%;
 }
 
 .login:hover h2{
@@ -188,6 +193,56 @@ footer section div:hover i {
 
 }
 
+@media screen and (min-width:361px) {
+    .main-form{
+        display: block;
+        padding: 30px 10px ;
+   
+        margin-top:230px;
+    }
+   
+    
+}
+
+
+@media screen and (min-width:500px){
+    .main-form{
+
+   
+        margin-top:276px;
+    }
+    
+    footer {
+        background-color: rgb(133, 106, 255) ;
+        max-width: 1200px;
+    }
+
+  
+    footer ul  {    
+
+       
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    ul section{
+        padding:5px 10px;
+        margin: 5px 5px;
+    }
+    ul h3{
+        font-size: 12px;
+
+    }
+    ul p{
+        font-size: 10px;
+        padding-top: 20px  ;
+    }
+    footer .copy{
+        text-align: center;
+    }
+
+}
+
     @media screen and (min-width:769px){  /*tambien sirve con @media ()...*/
   
         .main-headet-top-bar{
@@ -229,6 +284,18 @@ footer section div:hover i {
             display: flex;
             justify-content: space-between;
         }
+        .main-form{
+
+            margin-top:15%;
+        }
+    }
+
+    @media screen and (min-width:845px) {
+        .main-form{
+
+            margin-top:120px;
+        }
+        
     }
     
     @media screen and (min-width: 1200px) {
@@ -261,33 +328,5 @@ footer section div:hover i {
         }
         
     }
-@media screen and (min-width:500px){
-    footer {
-        background-color: rgb(133, 106, 255) ;
-        max-width: 1200px;
-    }
-    footer ul  {    
 
-       
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-    }
-    ul section{
-        padding:5px 10px;
-        margin: 5px 5px;
-    }
-    ul h3{
-        font-size: 12px;
-
-    }
-    ul p{
-        font-size: 10px;
-        padding-top: 20px  ;
-    }
-    footer .copy{
-        text-align: center;
-    }
-
-}
 
