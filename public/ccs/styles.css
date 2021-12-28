@@ -34,7 +34,7 @@ font-family: 'Roboto', sans-serif;
     --verde: #39b54a;
     --negro: rgba(3, 2, 2, 1);
     --blanco: #ffff;
-    --azul: #0044aa;
+    --azulcaro: #0044aa;
     /* fuentes-Tamaños */
     --cuerpos-de-texto: 1.2em;
     --titulares-visita-ofertas : 2.4em;
@@ -76,10 +76,8 @@ h3{
 }
 
 /* CABECERA*/
-header{
-    background-color: var(--amarillo)
-}
 
+/*
 div.top-header{
     display:flex;
     flex:wrap;
@@ -138,21 +136,50 @@ div.burger-menu{
 
 }
 
-header div.burger-menu i {
-    
-    background-color: var(--azul);
-    font-size: 20px;             /*tamaño*/
-    color: var(--blanco);        /*coloe de la figura*/
-    height: 40px;
-    width: 40px;                       /*tocaba comentariarlo */
-    /*text-align: center;*/
-
-    margin: 10px 0px 20px 0px;
-
-    padding: 10px;
-    border-radius: 5px;
-
+*/
+body{
+    font-family: var(--roboto);
 }
+.main-header{
+    background-color: var(--amarillo);
+    padding: 20px;
+}
+.hamburguer-button{
+    background-color: var(--azul);
+    color: var(--blanco);
+    display: block;
+    max-width: 40px;
+    padding: 10px 5px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+}
+.logo{
+    width: 200px;
+}
+
+.copy-header{
+    font-weight: 400;
+    text-align: center;
+}
+.main-navbar{
+    display: none;
+}
+.main-navbar ul{
+    list-style: none;
+    margin:0px;
+    padding: 0px;
+}
+.main-navbar a{
+    text-decoration: none;
+    color: var(--azul); 
+    display: inline-block;
+    padding:5px 0px;
+    font-size: 17px;
+}
+
+
 
 /*BANNER*/
 section.banner img{  /*recordemos que el block usa el 100% del bloque toca nombrar a la img pra que funcione
@@ -303,18 +330,6 @@ footer section h4.copy{
 /*solo pantallas screen*/
 @media screen and (min-width:361px) {
     
-    .burger-menu{
-        display:none;
-    }
-
-    header nav{
-        display:flex;
-    }
-
-    nav ul{
-        display:flex;
-    }
-
     .description {
         display: none;
         transition: all 0.9s;
@@ -344,21 +359,45 @@ footer section h4.copy{
 }
 
 @media screen and (min-width:769px){
+    .main-headet-top-bar{
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-header-top-bar .buscar{
+        display: flex;
+        justify-content: center;
+        padding: 0px 30px;
+    }
+    .main-navbar li{
+        margin: 0 15px;
+    }
+    .copy-header{
+        max-width: 350px;
+        text-align: right;
+    }
+   
+    .hamburguer-button{
+        display: none;
+    }
+    .main-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .left-navbar{
+        display: flex;
+        padding: 10px 10px;
+        margin: auto;
+    }
+    .rigth-navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+   
     .products-container article {
         max-width: 20%;
     }
-   
 
-    nav ul.izquierda{
-        display:flex;
-        justify-content: flex-start;
-
-    }
-    nav ul.derecha{
-        display:flex;
-        justify-content: flex-end;
-        
-    }     
+      
     main section .products-container{
         box-shadow: none;
 
@@ -382,15 +421,24 @@ footer section h4.copy{
     }
     
 }
-/*
+
 @media screen and (min-width:1200px){
-    main section {
-        display:flex;
-        
-    }
-    .products-container {
-        max-width: 10%;
-    }
+  .logo{
+      width: 250px;
+  }
+  .main-header-top-bar,.main-navbar{
+      max-width:1200px;
+      margin:auto;
+  }
+  .main-header-top-bar{
+      align-items: center;
+  }
+  .copy-header{
+      max-width: none;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0;
+  }
+
 }
 
-*/

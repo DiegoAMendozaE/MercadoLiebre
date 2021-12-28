@@ -18,7 +18,11 @@
 /*Tipografia */
     --roboto:"Roboto",sans-serif;
 }
+/*html{
+    font-size: 62.5%;
+    font-family: var(--roboto);
 
+}*/
 body{
     font-family: var(--roboto);
 }
@@ -72,12 +76,7 @@ display: none;
     padding: 5px 0px;/*le damos un poco de relleno tanto en top como en abajo */
     font-size:17px;
 }
-footer section div i{
-    transition: all 0.7s;
-}
-footer section div:hover i{
-    color: black;
-}
+
 
 
 
@@ -168,6 +167,7 @@ footer{
 }
 
 
+
 footer section{
         display:block;
         padding: 20px 0px 10px;
@@ -185,66 +185,13 @@ footer section div{
         margin: auto;
     }
 
-@media screen and (min-width:500px){
-    footer {
-        background-color: rgb(133, 106, 255) ;
-        max-width: 1200px;
+footer section div i{
+        transition: all 0.7s;
     }
-    footer ul  {    
-
-       
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-    }
-    ul section{
-        padding:5px 10px;
-        margin: 5px 5px;
-    }
-    ul h3{
-        font-size: 12px;
-
-    }
-    ul p{
-        font-size: 10px;
-        padding-top: 20px  ;
-    }
-    footer .copy{
-        text-align: center;
+footer section div:hover i{
+        color: black;
     }
 
-}
-
-@media screen and (min-width: 1200px) {
-
-    .logo{
-        width: 250px;
-    }
-    .main-headet-top-bar, .main-navbar{ /*Limitamos el ancho*/
-        max-width: 1200px;
-        margin: auto;
-    }
-    .main-headet-top-bar{
-        align-items: center;
-        
-    }
-    .copy-header{
-        max-width: none;
-        font-size: 22px;
-        font-weight: 400;
-        margin: 0;
-    }
-    .main-navbar{
-        margin-top: 35px;
-    }
-    .main-navbar li{
-        margin: 0 15px;
-    }
-    .main-navbar a{
-        font-size: 19px;
-    }
-    
-}
 
 @media screen and (min-width:769px){  /*tambien sirve con @media ()...*/
   
@@ -288,3 +235,33 @@ footer section div{
         justify-content: space-between;
     }
 }
+@media screen and (min-width:500px){
+    footer {
+        background-color: rgb(133, 106, 255) ;
+        max-width: 1200px;
+    }
+    footer ul  {    
+
+       
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    ul section{
+        padding:5px 10px;
+        margin: 5px 5px;
+    }
+    ul h3{
+        font-size: 12px;
+
+    }
+    ul p{
+        font-size: 10px;
+        padding-top: 20px  ;
+    }
+    footer .copy{
+        text-align: center;
+    }
+
+}
+
