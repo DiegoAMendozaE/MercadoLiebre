@@ -165,7 +165,9 @@ footer{
     background-color: rgb(133, 106, 255) ;
 
 }
-
+footer ul{
+    padding: 0px 15px;
+}
 
 
 footer section{
@@ -192,7 +194,35 @@ footer section div:hover i{
         color: black;
     }
 
-
+@media screen and (min-width:500px){
+        footer {
+            background-color: rgb(133, 106, 255) ;
+            max-width: 1200px;
+        }
+        footer ul  {    
+    
+           
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        ul section{
+            padding:5px 10px;
+            margin: 5px 5px;
+        }
+        ul h3{
+            font-size: 12px;
+    
+        }
+        ul p{
+            font-size: 10px;
+            padding-top: 20px  ;
+        }
+        footer .copy{
+            text-align: center;
+        }
+    
+    }
 @media screen and (min-width:769px){  /*tambien sirve con @media ()...*/
   
     .main-headet-top-bar{
@@ -235,33 +265,5 @@ footer section div:hover i{
         justify-content: space-between;
     }
 }
-@media screen and (min-width:500px){
-    footer {
-        background-color: rgb(133, 106, 255) ;
-        max-width: 1200px;
-    }
-    footer ul  {    
 
-       
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-    }
-    ul section{
-        padding:5px 10px;
-        margin: 5px 5px;
-    }
-    ul h3{
-        font-size: 12px;
-
-    }
-    ul p{
-        font-size: 10px;
-        padding-top: 20px  ;
-    }
-    footer .copy{
-        text-align: center;
-    }
-
-}
 

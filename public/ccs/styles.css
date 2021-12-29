@@ -288,40 +288,39 @@ main section article div.product-card{
 
 /*foot*/
 
-footer div{
-    text-align: center;
-    background-color: var(--blanco) ;
-    font-size: 20px;
-    color: var(--azul);
-    height: 10px;
-    /*width: 35px;*/
-    margin: 20px 0 20px 0;
-    padding: 10px;
-    border-radius: 5%;
-
-}
 
 
-footer p {
-    text-align: center;
-    color:var(--gris-oscuro)
 
-
-}
-
-footer h3.h3 {
-    text-align: center;
-    color:var(--gris-oscuro)
-    
-
-}
-footer section h4.copy{
-    color: #669;
-    font-size: 1.6em;
-    text-align:right;
-
-}
  
+
+/*footer*/
+footer{
+    margin: auto;
+    background-color: rgb(133,106,255);
+}
+footer ul{
+    padding: 0px 15px;
+}
+footer section{
+    margin: auto;
+    padding: 20px 0px 10px;
+}
+footer section div{
+    border: none;
+    max-width: 40px;
+    font-size: 30px;
+    color: var(--azul);
+    padding: 10px 0px;
+    border-radius: 8px;
+    text-align: center;
+    margin: auto;
+    transition: all 1s linear;   
+}
+footer section div:hover i{
+    color: rgb(0,0,0);
+}
+
+/*fin del footer */
 
 
 
@@ -356,6 +355,32 @@ footer section h4.copy{
         max-width: 45%;
     }
 
+}
+@media screen and (min-width:500px) {
+    footer{
+        background-color: rgb(133,106,255);
+        max-width: 1200px;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+    ul section{
+        padding: 5px 10px;
+        margin:  5px 5px;
+    }
+    ul h3{
+        font-size: 12px;
+    }
+    ul p{
+        font-size: 10px;
+        padding-top:20px;
+    }
+    footer .copy {
+        text-align: center;
+    }
+    
 }
 
 @media screen and (min-width:769px){

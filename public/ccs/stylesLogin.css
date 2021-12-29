@@ -167,7 +167,9 @@ footer{
     background-color: rgb(133, 106, 255) ;
 
 }
-
+footer ul{
+    padding: 0px 15px;
+}
 
 footer section{
         display:block;
@@ -243,7 +245,7 @@ footer section div:hover i {
 
 }
 
-    @media screen and (min-width:769px){  /*tambien sirve con @media ()...*/
+@media screen and (min-width:769px){  /*tambien sirve con @media ()...*/
   
         .main-headet-top-bar{
             display: flex;
@@ -289,8 +291,7 @@ footer section div:hover i {
             margin-top:15%;
         }
     }
-
-    @media screen and (min-width:845px) {
+@media screen and (min-width:845px) {
         .main-form{
 
             margin-top:120px;
@@ -298,7 +299,7 @@ footer section div:hover i {
         
     }
     
-    @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     
         .logo{
             width: 250px;
