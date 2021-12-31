@@ -179,7 +179,14 @@ body{
     font-size: 17px;
 }
 
-
+.rigth-navbar li{
+    display: flex;
+    align-items: center;
+}
+.rig-icon i {
+    margin: 0px 0px 0px 5px;
+    font-size: 15px;
+}
 
 /*BANNER*/
 section.banner img{  /*recordemos que el block usa el 100% del bloque toca nombrar a la img pra que funcione
